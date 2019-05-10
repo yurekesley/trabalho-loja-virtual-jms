@@ -16,9 +16,9 @@ public class PedidoProducer {
 	@JMSConnectionFactory("ConnectionFactory")
 	private JMSContext context;
 	
-	@Resource(lookup = "jms/queue/myQueue")
+	@Resource(mappedName="java:/queue/myQueue")
 	private Queue queue;
-	
+
 	public void sendMessage(String text) {
 		this.context.createProducer().send(queue, text);
 	}
