@@ -12,15 +12,47 @@
 
 	<artifactId>app-ear</artifactId>
 	<name>app-ear</name>
+	<packaging>ear</packaging>
 	<url>http://maven.apache.org</url>
 
 	<dependencies>
 		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
-			<scope>test</scope>
+			<groupId>br.com.yurekesley</groupId>
+			<artifactId>app-jms</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>ejb</type>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>br.com.yurekesley</groupId>
+			<artifactId>app-web</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>war</type>
+			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
-	
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>3.0.1</version>
+				<configuration>
+					<modules>
+						<ejbModule>
+							<groupId>br.com.yurekesley</groupId>
+							<artifactId>app-jms</artifactId>
+							<uri>/app-jms.jar</uri>
+						</ejbModule>
+						<webModule>
+							<groupId>br.com.yurekesley</groupId>
+							<artifactId>app-web</artifactId>
+							<uri>/loja-virtual.war</uri>
+							<contextRoot>loja-virtual</contextRoot>
+						</webModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

@@ -13,6 +13,16 @@
 	<artifactId>app-web</artifactId>
 	<packaging>war</packaging>
 	<name>app-web Maven Webapp</name>
+	
+	<dependencies>
+		<dependency>
+			<groupId>br.com.yurekesley</groupId>
+			<artifactId>app-jms</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<type>jar</type>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>

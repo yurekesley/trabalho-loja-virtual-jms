@@ -1,13 +1,17 @@
 package br.com.yurekesley;
 
-/**
- * Hello world!
- *
- */
+import javax.annotation.PostConstruct;
+import javax.ejb.Singleton;
+import javax.ejb.Startup;
+
+@Singleton
+@Startup
 public class App 
 {
-    public static void main( String[] args )
+	
+	@PostConstruct
+    public void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        System.out.println( "Hello World! - APP - JMS" );
     }
 }
