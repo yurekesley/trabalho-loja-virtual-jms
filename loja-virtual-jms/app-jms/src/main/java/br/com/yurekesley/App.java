@@ -10,8 +10,8 @@ public class App
 {
 	
 	@PostConstruct
-    public void main( String[] args )
+    public void main()
     {
-        System.out.println( "Hello World! - APP - JMS" );
+    //    this.pedidoProducer.sendMessage("Yure Kesley");
     }
 }
