@@ -9,8 +9,8 @@ import javax.jms.TextMessage;
 
 @MessageDriven(activationConfig = {
 		@ActivationConfigProperty(propertyName = "destinationType", propertyValue = "javax.jms.Queue"),
-		@ActivationConfigProperty(propertyName = "destinationLoookup", propertyValue = "jms/queue/myQueue"),
-		@ActivationConfigProperty(propertyName = "destination", propertyValue = "jms/queue/myQueue") })
+		@ActivationConfigProperty(propertyName = "destinationLoookup", propertyValue = "java:/jms/queue/rQueue"),
+		@ActivationConfigProperty(propertyName = "destination", propertyValue = "java:/jms/queue/rQueue") })
 public class MainReceiver implements MessageListener {
 
 	public void onMessage(Message message) {

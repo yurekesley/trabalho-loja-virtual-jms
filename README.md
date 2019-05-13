@@ -16,10 +16,9 @@ docker run -p 9990:9990 -p 8080:8080 loja-virtual
 #### Produtos disponíveis
 
 ```sh
-http://localhost:8080/loja/produtos
-```
+http://localhost:8080/loja-virtual/produtos
 
-#### Disponibiliza uma tela para adicionar/remover produtos no carrinho e finalizar compra
+```
 
 ```sh
 http://localhost:8080/loja/compras

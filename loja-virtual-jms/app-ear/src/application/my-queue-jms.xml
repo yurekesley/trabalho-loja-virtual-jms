@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<messaging-deployment
-	xmlns="urn:jboss:messaging-activemq-deployment:1.0">
-	<server name="default">
-		<jms-destinations>
-			<jms-queue name="myQueue">
-				<entry name="jms/queue/myQueue" />
-				<entry name="java:jboss/exported/jms/queue/myQueue" />
-			</jms-queue>
-
-			<jms-queue name="testQueue">
-				<entry name="jms/queue/test" />
-				<entry name="java:jboss/exported/jms/queue/test" />
-			</jms-queue>
-			
-			<jms-topic name="testTopic">
-				<entry name="jms/topic/test" />
-				<entry name="java:jboss/exported/jms/topic/test" />
-			</jms-topic>
-		</jms-destinations>
-	</server>
+<messaging-deployment xmlns="urn:jboss:messaging-activemq-deployment:1.0">
+   <server name="default">
+      <jms-destinations>
+         <jms-queue name="rQueue">
+            <entry name="jms/queue/rQueue"/>
+            <entry name="java:jboss/exported/jms/queue/rQueue"/>
+         </jms-queue>
+      </jms-destinations>
+   </server>
 </messaging-deployment>
