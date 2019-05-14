@@ -1,34 +1,44 @@
 package br.com.yurekesley.model;
 
-public class Produto implements Comparable<Produto> {
+import java.io.Serializable;
+
+public class Produto implements Serializable {
+
+
+	private static final long serialVersionUID = 1L;
 	
-	private String id;
-	private String descricao;
+	private String codigo;
+	private String nome;
+	private Double valor;
 
-	public Produto(String id, String descricao) {
-		this.id = id;
-		this.descricao = descricao;
+	public Produto(String codigo, String nome, Double valor) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.valor = valor;
 	}
 
-	public String getId() {
-		return id;
+	public String getCodigo() {
+		return codigo;
 	}
 
-	public void setId(String id) {
-		this.id = id;
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
 	}
 
-	public String getDescricao() {
-		return descricao;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
-	
-	@Override
-	public int compareTo(Produto o) {
-		return this.id.compareTo(o.id);
+
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
 	}
 
 }

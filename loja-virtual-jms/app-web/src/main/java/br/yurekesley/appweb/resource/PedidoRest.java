@@ -2,7 +2,6 @@ package br.yurekesley.appweb.resource;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -21,14 +20,8 @@ public class PedidoRest {
 	private PedidoProducer producer;
 
 	@POST
-	public Response gerarPedido(Produto produto) {
-		this.producer.sendMessage(produto.getId());
+	public Response adicionarProduto(Produto produto) {
+		this.producer.sendMessage(produto);
 		return Response.status(200).entity(produto).build();
 	}
-
-	@GET
-	public void listar() {
-		this.producer.sendMessage("YURE KESLEY");
-	}
-
 }

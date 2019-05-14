@@ -7,6 +7,8 @@ import javax.jms.JMSConnectionFactory;
 import javax.jms.JMSContext;
 import javax.jms.Queue;
 
+import br.com.yurekesley.model.Produto;
+
 @Stateless
 public class PedidoProducer {
 
@@ -14,12 +16,10 @@ public class PedidoProducer {
 	@JMSConnectionFactory("java:/ConnectionFactory")
 	private JMSContext context;
 
-    @Resource(mappedName = "java:/jms/queue/rQueue")  
+	@Resource(mappedName = "java:/jms/queue/rQueue")
 	private Queue queue;
 
-	public void sendMessage(String text) {
-
-		this.context.createProducer().send(queue, text);
-
+	public void sendMessage(Produto produto) {
+		this.context.createProducer().send(queue, produto);
 	}
 }
