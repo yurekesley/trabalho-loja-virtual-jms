@@ -17,8 +17,6 @@ import br.com.yurekesley.model.Produto;
 @ApplicationScoped
 public class EstoqueBean implements IEstoque {
 	
-	private InfoBean info;
-	
 	private List<Produto> produtos = new ArrayList<Produto>();
 
 	@PostConstruct

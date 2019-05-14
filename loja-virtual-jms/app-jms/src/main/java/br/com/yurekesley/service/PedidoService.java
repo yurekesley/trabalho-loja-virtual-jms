@@ -3,7 +3,7 @@ package br.com.yurekesley.service;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
-import br.com.yurekesley.AppRepository;
+import br.com.yurekesley.bean.IEstoque;
 import br.com.yurekesley.model.Pedido;
 import br.com.yurekesley.model.Produto;
 
@@ -13,7 +13,7 @@ public class PedidoService {
 	private Pedido pedido;
 
 	@Inject
-	private AppRepository repository;
+	private IEstoque estoque ;
 
 	public void adicionarProdutoNoPedido(Produto p) {
 

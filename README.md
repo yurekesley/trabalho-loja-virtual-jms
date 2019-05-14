@@ -16,10 +16,12 @@ docker run -p 9990:9990 -p 8080:8080 loja-virtual
 #### Produtos disponíveis
 
 ```sh
-http://localhost:8080/loja-virtual/produtos
+LISTAGEM DE PEDIDOS
 
+GET =>	http://localhost:8080/loja-virtual/produtos
 ```
-
 ```sh
-http://localhost:8080/loja/compras
+CRIA UM PEDIDO COM O PRODUTO ENVIADO VIA POST
+
+POST =>	http://localhost:8080/loja-virtual/pedidos
 ```
